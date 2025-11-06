@@ -1,0 +1,32 @@
+# ---------- GENERAL ----------
+
+sort=-time
+width=350
+height=500
+layer=overlay
+border-radius=1
+icons=1
+icon-location=left
+max-icon-size=64
+font=JetBrains Mono Nerd Font
+default-timeout=5000
+ignore-timeout=1
+
+# ---------- COLORS ----------
+
+background-color=#1e1e2e
+text-color=#cdd6f4
+border-color=#f5c2e7
+progress-color=over #313244
+
+# ---------- URGENCY ----------
+
+[urgency=low]
+border-color=#a6e3a1
+
+[urgency=normal]
+border-color=#f9e2af
+
+[urgency=high]
+border-color=#f38ba8
+default-timeout=0

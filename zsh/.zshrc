@@ -73,3 +73,7 @@ setopt hist_ignore_dups
 # ---------- SHELL INTEGRATIONS ----------
 
 eval "$(fzf --zsh)"
+
+# ---------- FASTFETCH ----------
+
+fastfetch

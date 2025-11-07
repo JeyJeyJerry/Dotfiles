@@ -60,7 +60,7 @@ alias ls='ls --color'
 # ---------- HISTORY ----------
 
 HISTSIZE=5000
-HISTFILE=~/.zsh_history
+HISTFILE=~/.config/zsh/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory
@@ -77,3 +77,6 @@ eval "$(fzf --zsh)"
 # ---------- FASTFETCH ----------
 
 fastfetch
+
+# ---------- SOURCE PROMPT ----------
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

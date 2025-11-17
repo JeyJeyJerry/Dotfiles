@@ -1,0 +1,91 @@
+{
+  "bar.customModules.storage.paths": [
+    "/"
+  ],
+  "theme.font.name": "JetBrainsMono Nerd Font",
+  "theme.font.label": "JetBrainsMono Nerd Font",
+  "theme.font.size": "0.8rem",
+  "theme.bar.floating": false,
+  "theme.bar.buttons.enableBorders": false,
+  "theme.bar.border.location": "none",
+  "theme.bar.enableShadow": false,
+  "menus.clock.weather.location": "Helsinki",
+  "menus.clock.weather.unit": "metric",
+  "menus.clock.time.military": true,
+  "menus.dashboard.powermenu.avatar.name": "Arkki",
+  "theme.font.weight": 600,
+  "bar.layouts": {
+    "DP-2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "media"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "clock",
+        "notifications"
+      ]
+    },
+    "DP-1": {
+      "left": [],
+      "middle": [],
+      "right": []
+    }
+  },
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "bar.launcher.autoDetectIcon": false,
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.showWsIcons": false,
+  "menus.dashboard.directories.left.directory1.command": "bash -c \"xdg-open $HOME/downloads/\"",
+  "menus.dashboard.directories.left.directory2.command": "bash -c \"xdg-open $HOME/videos/\"",
+  "menus.dashboard.directories.right.directory1.command": "bash -c \"xdg-open $HOME/documents/\"",
+  "menus.dashboard.directories.left.directory3.command": "bash -c \"xdg-open $HOME/projects/\"",
+  "menus.dashboard.directories.right.directory2.command": "bash -c \"xdg-open $HOME/pictures/\"",
+  "theme.bar.outer_spacing": "0.1em",
+  "theme.bar.buttons.separator.margins": "0.15em",
+  "bar.clock.format": "%d.%m.%Y  %H:%M:%S",
+  "theme.bar.menus.monochrome": false,
+  "theme.bar.transparent": true,
+  "terminal": "$Terminal",
+  "menus.transition": "crossfade",
+  "bar.autoHide": "fullscreen",
+  "theme.bar.buttons.borderSize": "0.1em",
+  "scalingPriority": "hyprland",
+  "theme.bar.buttons.spacing": "0.5em",
+  "theme.bar.buttons.y_margins": "0.4em",
+  "theme.bar.buttons.padding_x": "0.7rem",
+  "theme.bar.dropdownGap": "2.9em",
+  "theme.bar.margin_bottom": "0em",
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "bar.workspaces.numbered_active_indicator": "underline",
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "theme.bar.buttons.windowtitle.enableBorder": false,
+  "bar.network.label": false,
+  "bar.network.showWifiInfo": false,
+  "bar.network.truncation": true,
+  "theme.bar.buttons.systray.enableBorder": false,
+  "theme.bar.buttons.media.enableBorder": false,
+  "bar.notifications.show_total": true,
+  "menus.media.displayTime": true,
+  "menus.media.displayTimeTooltip": false,
+  "notifications.autoDismiss": false,
+  "menus.dashboard.powermenu.avatar.image": "/mnt/bigfloppa/Drawer/Photos/Random ass photos/Jerry and friends pc/Omegathonkk.jpg",
+  "menus.dashboard.powermenu.logout": "hyprlock",
+  "menus.dashboard.powermenu.reboot": "reboot",
+  "menus.dashboard.powermenu.shutdown": "shutdown -h now",
+  "menus.dashboard.recording.path": "$HOME/videos/screencasts",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
+  "menus.power.shutdown": "shutdown -h now",
+  "menus.power.reboot": "reboot",
+  "menus.power.logout": "hyprlock"
+}

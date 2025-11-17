@@ -60,7 +60,7 @@ alias ls='ls --color'
 # ---------- HISTORY ----------
 
 HISTSIZE=5000
-HISTFILE=~/.config/zsh/.zsh_history
+HISTFILE=~/.config/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
 setopt appendhistory

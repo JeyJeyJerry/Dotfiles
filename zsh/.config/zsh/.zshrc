@@ -74,9 +74,5 @@ setopt hist_ignore_dups
 
 eval "$(fzf --zsh)"
 
-# ---------- FASTFETCH ----------
-
-fastfetch
-
 # ---------- SOURCE PROMPT ----------
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh

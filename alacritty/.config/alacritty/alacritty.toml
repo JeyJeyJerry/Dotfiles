@@ -1,13 +1,14 @@
 # ---------- Theme ----------
 
 general.import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
+  "~/.config/alacritty/gruvbox-dark.toml"
 ]
 
 # ---------- Window ----------
 
 [window]
 padding = {x = 5, y = 5}
+opacity = 0.95
 
 # ---------- Font Settings ----------
 

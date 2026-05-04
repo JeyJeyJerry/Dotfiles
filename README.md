@@ -1,5 +1,5 @@
 # Dotfiles
 
-- Current colorscheme: Gruvbox dark
+- Current colorscheme: Gruvbox Dark
 
 ![Alt text](screenshots/apps.png)

@@ -1,7 +1,0 @@
-@theme "catppuccin-default"
-
-configuration {
-    modi: "drun,run";                    // Available modes
-    show-icons: true;                    // Show app icons
-    font: "JetBrainsMono Nerd Font 12";  // Global font
-}

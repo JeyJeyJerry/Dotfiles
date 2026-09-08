@@ -1,79 +1,83 @@
+// ---------- Core ----------
+
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        "type": "auto",
         "source": "arch",
+        "type": "small",
+        "padding": {
+            "top": 1,
+            "left": 3
+        },
         "color": {
-            "1": "yellow",
-            "2": "light_yellow"
+            "1": "#d65d0e",
+            "2": "#fe8019"
         }
     },
     "display": {
-        "separator": ": ",
-        "color": {
-            "keys": "yellow",
-            "title": "light_yellow"
+        "separator": " ",
+        "percent": {
+            "type": 3
         },
         "key": {
-            "type": "string"
-        },
-        "bar": {
-            "width": 10,
-            "char": {
-                "elapsed": "■",
-                "total": "-"
-            }
-        },
-        "percent": {
-            "type": 2,
-            "color": {
-                "green": "green",
-                "yellow": "light_yellow",
-                "red": "light_red"
-            }
+            "width": 12
         }
     },
+
+// ---------- Modules ----------
+
     "modules": [
-        "title",
+        {
+            "type": "title",
+            "color": {
+                "user": "#d65d0e",
+                "at": "#ebdbb2",
+                "host": "#d65d0e"
+            }
+        },
         "separator",
-        "os",
-        "host",
-        "kernel",
-        "uptime",
-        "packages",
-        "shell",
         {
-            "type": "display",
-            "format": "{width}x{height} @ {refresh-rate} Hz ({inch}\")"
-        },
-        "de",
-        "wm",
-        {
-            "type": "theme",
-            "format": "{theme1}"
+            "type": "kernel",
+            "key": "Distro",
+            "keyColor": "#cc241d"
         },
         {
-            "type": "icons",
-            "format": "{icons1}"
-        },
-        "terminal",
-        {
-            "type": "terminalfont",
-            "format": "{name}"
+            "type": "uptime",
+            "key": "Uptime",
+            "keyColor": "#98971a"
         },
         {
-            "type": "cpu",
-            "showPeCoreCount": true,
-            "temp": true
+            "type": "shell",
+            "key": "Shell",
+            "keyColor": "#d79921"
         },
         {
-            "type": "gpu",
-            "format": "{name} - {temperature}",
-            "driverSpecific": false,
-            "temp": true,
-            "hideType": "integrated"
+            "type": "memory",
+            "key": "RAM",
+            "keyColor": "#458588"
         },
-        "memory",
-        "disk"
+        {
+            "type": "disk",
+            "key": "Disk",
+            "keyColor": "#b16286",
+            "folders": [
+                "/"
+            ]
+        },
+        {
+            "type": "packages",
+            "key": "Packages",
+            "format": "{pacman} (pacman)",
+            "keyColor": "#689d6a"
+        },
+        {
+            "type": "battery",
+            "key": "   Battery  ",
+            "keyColor": "#ebdbb2"
+        },
+        {
+            "type": "colors",
+            "symbol": "circle"
+        }
     ]
 }

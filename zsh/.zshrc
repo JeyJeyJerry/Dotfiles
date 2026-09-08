@@ -1,78 +1,46 @@
-# ---------- POWERLEVEL10K INSTANT PROMPT ----------
+# ---------- History ----------
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTSIZE=100000
+SAVEHIST=100000
 
-# ---------- XINIT & PLUGINS ----------
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
 
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+# ---------- Shell behaviour ----------
 
-# ---------- DOWNLOAD IF NOT INSTALLED ----------
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT
 
-if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
+# ---------- Smart directory navigation ----------
 
-# ---------- SOURCE/LOAD ZINIT ----------
+eval "$(zoxide init zsh)"
 
-source "${ZINIT_HOME}/zinit.zsh"
+# ---------- Completion ----------
 
-# ---------- POWERLEVEL10K ----------
+autoload -Uz compinit
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 
-# ---------- ZSH PLUGINS ----------
-
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
-# ---------- SNIPPETS -----------
-
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-
-# ---------- LOAD COMPLETIONS ----------
-
-autoload -U compinit && compinit
-
-zinit cdreplay -q
-
-# ---------- COMPLETION STYLING ----------
-
+zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-# ---------- ALIASES ----------
+# ---------- Fuzzy finder ----------
 
-alias ls='ls --color'
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
+fi
 
-# ---------- PROMPT ----------
+# ---------- Modular Config Files ----------
 
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# ---------- HISTORY ----------
-
-HISTSIZE=5000
-HISTFILE=~/.config/.zsh_history
-SAVEHIST=$HISTSIZE
-HISTDUP=erase
-setopt appendhistory
-setopt sharehistory
-setopt hist_ignore_space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-
-# ---------- SHELL INTEGRATIONS ----------
-
-eval "$(fzf --zsh)"
-
-# ---------- SOURCE PROMPT ----------
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+source "$ZDOTDIR/fzf.zsh"
+source "$ZDOTDIR/aliases.zsh"
+source "$ZDOTDIR/bindings.zsh"
+source "$ZDOTDIR/plugins.zsh"
+source "$ZDOTDIR/prompt.zsh"

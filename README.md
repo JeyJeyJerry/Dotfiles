@@ -2,4 +2,4 @@
 
 - Current colorscheme: Gruvbox Dark
 
-![Alt text](screenshots/apps.png)
+![Alt text](screenshots/readme.png)

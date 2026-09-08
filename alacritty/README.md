@@ -1,3 +1,3 @@
 # Alacritty
 
-![Alt text](screenshots/alacritty.png)
+![Alt text](/screenshots/alacritty.png)
